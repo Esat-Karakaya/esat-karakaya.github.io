@@ -1,6 +1,7 @@
 :root{
 	--nav-backround: linear-gradient(to right,#032dfc, #a803fc);
 	--page-line:black ;
+	--nav-button-color: linear-gradient(to right,#00ffc4, #03cefc);
 }
 body,html{
 	margin: 0;
@@ -101,7 +102,7 @@ p{
 	text-align: left;
 }
 #place, .link, [end]{
-	background-image: linear-gradient(to right,#00ffc4, #03cefc);
+	background-image: var(--nav-button-color);
 	display: inline-block;
 	padding: 15px 10px 15px 10px;
 	position: relative;
