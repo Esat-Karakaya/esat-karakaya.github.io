@@ -1,3 +1,4 @@
+//setting definitions
 const button = document.querySelector("#button-x");
 const nav=document.getElementsByTagName('nav')[0];
 const darker=document.querySelector(".select");
@@ -8,13 +9,13 @@ button.addEventListener("click", function(){
 	nav.className="bye"
 	darker.setAttribute("id", "open")
 })
-
+//If hamburger button gets clicked, nav becomes visible
 document.querySelector("#menu").addEventListener("click", function(){
 	nav.style.display = "inline-block"
 	nav.className="hello"
 	darker.setAttribute("id", "dark")
 })
-
+//Responsive nav, darker content (if nav is visible)
 window.addEventListener("resize", ()=>{
 	if (window.innerWidth > 600) {
 		nav.style.display = "block"
@@ -26,6 +27,8 @@ window.addEventListener("resize", ()=>{
 		}
 	}
 })
+//For example if you click "invesives" (wich is in nav) while you're at home
+//a black line at their bottom appears and disappears respectively 
 const updateNavOnSelect = (i) => {
 	document.querySelector("#place").setAttribute("class", "link")
 	document.querySelector("#place").setAttribute("leavePage", "ja")
@@ -34,6 +37,7 @@ const updateNavOnSelect = (i) => {
 	pages[i].setAttribute("class", "")
 	pages[i].setAttribute("leavePage", "")
 }
+//content changes via innerHTML
 pages[0].addEventListener("click",()=>{
 	updateNavOnSelect(0)
 	contentDiv.innerHTML = "<h2>Why I Createded This?</h2><p>I created this site to exercise HTML, CSS and DOM (Document Object Model -a javascript object-); and when I was thinking about what the content should be, I decided it could be ants because I know a lot about them (At least compared to most people) and it is an easier topic than most other ones. For example climate change would be a huge pain to make a site about,  because it is a big issue with alot of environmental damage and there are so many solutions that comes up with their own problems.</p><h2>What Is This Site For?</h2><p>Altougth there are some videos but there aren't enough fun and yet scientific sites about ants.Leaving an entire world unknown.So we wanted to solve this problem by creating one.You can even dive deeper by looking at our scources.</p>"
