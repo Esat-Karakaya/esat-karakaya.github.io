@@ -48,7 +48,9 @@ pages[1].addEventListener("click",()=>{
 })
 pages[2].addEventListener("click",()=>{
 	updateNavOnSelect(2)
+	contentDiv.innerHTML = "<h2>Wars Page In Progress :)</h2>";
 })
 pages[3].addEventListener("click",()=>{
 	updateNavOnSelect(3)
+	contentDiv.innerHTML = "<h2>Invasives Page In Progress ;)</h2>";
 })
