@@ -1,5 +1,3 @@
-import { without } from "lodash";
-console.log(without);
 //setting definitions
 const button = document.querySelector("#button-x");
 const nav=document.getElementsByTagName('nav')[0];
