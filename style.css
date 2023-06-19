@@ -200,100 +200,98 @@ p{
 	0%{transform: scaleX(1);}
 	100%{transform: scaleX(0);}
 }
-@media screen and (max-width: 600px){
-	span[space]{
-		margin: 0;
-	}
-	nav{
-		position: fixed;
-		left: -200px;
-		height: 100%;
-		width: 200px;
-		margin: 0;
-	}
-	button[end]{
-		margin:5px 0 0 0;
-		float: none;
-		width: 90%;
-	}
-	.link::before{
-		height: 3px;
-		width: 0;
-		bottom: 0;
-		left: 0;
-		transform: none;
-		transition: all 0.3s;
-	}
-	.link:hover:before{
-		width: 100%;
-	}
-	.link,#place,[end]{
-		display: block;
-		margin: 0;
-		border-radius: 0;
-		position: relative;
-	}
-	#menu{
-		display: flex;
-		height: 15px;
-		flex-direction: column;
-		justify-content: space-between;
-	}
-	#line{
-		display: block;
-		background-color: black;
-		height: 3px;
-		width: 25px;
-		border-radius: 2px;
-	}
-	#menu::before{
-		content: "";
-		background-color: black;
-		height: 3px;
-		width: 25px;
-		border-radius: 2px;
-		top: 0px;
-	}
-	#menu::after{
-		content: "";
-		background-color: black;
-		height: 3px;
-		width: 25px;
-		border-radius: 2px;
-		top: 0px;
-	}
-	#button-x{
-		position: absolute;
-		cursor: pointer;
-		width: 4px;
-		height: 4px;
-		padding: 15px;
-		top: 0;
-		right: 0;
-		z-index: 1;
-	}
-	#button-x::before{
-		content: "";
-		position: absolute;
-		right: 4px;
-		background-color: black;
-		height: 3px;
-		width: 25px;
-		border-radius: 2px;
-		transform: rotate(-45deg);
-	}
-	#button-x::after{
-		content: "";
-		position: absolute;
-		right: 4px;
-		background-color: black;
-		height: 3px;
-		width: 25px;
-		border-radius: 2px;
-		transform: rotate(45deg);
-	}
-	@keyframes leave{
-		0%{width: 100%;}
-		100%{width: 0%;}
-	}
+span[space]{
+	margin: 0;
+}
+nav{
+	position: fixed;
+	left: -200px;
+	height: 100%;
+	width: 200px;
+	margin: 0;
+}
+button[end]{
+	margin:5px 0 0 0;
+	float: none;
+	width: 90%;
+}
+.link::before{
+	height: 3px;
+	width: 0;
+	bottom: 0;
+	left: 0;
+	transform: none;
+	transition: all 0.3s;
+}
+.link:hover:before{
+	width: 100%;
+}
+.link,#place,[end]{
+	display: block;
+	margin: 0;
+	border-radius: 0;
+	position: relative;
+}
+#menu{
+	display: flex;
+	height: 15px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#line{
+	display: block;
+	background-color: black;
+	height: 3px;
+	width: 25px;
+	border-radius: 2px;
+}
+#menu::before{
+	content: "";
+	background-color: black;
+	height: 3px;
+	width: 25px;
+	border-radius: 2px;
+	top: 0px;
+}
+#menu::after{
+	content: "";
+	background-color: black;
+	height: 3px;
+	width: 25px;
+	border-radius: 2px;
+	top: 0px;
+}
+#button-x{
+	position: absolute;
+	cursor: pointer;
+	width: 4px;
+	height: 4px;
+	padding: 15px;
+	top: 0;
+	right: 0;
+	z-index: 1;
+}
+#button-x::before{
+	content: "";
+	position: absolute;
+	right: 4px;
+	background-color: black;
+	height: 3px;
+	width: 25px;
+	border-radius: 2px;
+	transform: rotate(-45deg);
+}
+#button-x::after{
+	content: "";
+	position: absolute;
+	right: 4px;
+	background-color: black;
+	height: 3px;
+	width: 25px;
+	border-radius: 2px;
+	transform: rotate(45deg);
+}
+@keyframes leave{
+	0%{width: 100%;}
+	100%{width: 0%;}
 }
