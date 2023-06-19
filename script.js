@@ -17,14 +17,9 @@ document.querySelector("#menu").addEventListener("click", function(){
 })
 //Responsive nav, darker content (if nav is visible)
 window.addEventListener("resize", ()=>{
-	if (window.innerWidth > 600) {
-		nav.style.display = "block"
-		darker.setAttribute("id", "open")
-	}else{
-		nav.style.display = "inline-block"
-		if (nav.className==="hello") {
-			darker.setAttribute("id", "dark")
-		}
+	nav.style.display = "inline-block"
+	if (nav.className==="hello") {
+		darker.setAttribute("id", "dark")
 	}
 })
 //For example if you click "invesives" (wich is in nav) while you're at home
