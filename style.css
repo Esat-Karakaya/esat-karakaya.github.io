@@ -204,6 +204,7 @@ h1{
 		margin: 0;
 	}
 	nav{
+		display: inline-block;
 		position: fixed;
 		left: -200px;
 		height: 100%;

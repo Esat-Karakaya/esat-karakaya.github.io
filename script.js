@@ -21,7 +21,6 @@ window.addEventListener("resize", ()=>{
 		nav.style.display = "block"
 		darker.setAttribute("id", "open")
 	}else{
-		nav.style.display = "inline-block"
 		if (nav.className==="hello") {
 			darker.setAttribute("id", "dark")
 		}
