@@ -1,11 +1,18 @@
 import "./navstyle.css";
-import {Navbutton} from "./navbutton";
+import Navbutton from "./navbutton";
 import { useState } from "react";
+import Hambutton from "./hambutton";
 const Nav=()=> {
     //Creating states
     const[page,swicthPage]=useState("Home");
-    const[navdisplay,newResponsiveNav]=useState("NavVisible");
+    const[smallNavVis,newsmalldis]=useState(false);
 
+    //If hamButton gets clicked this gets triggered
+    const hamClicked=()=>{
+        newsmalldis(true);
+    }
+
+    //When navButton gets clicked this gets triggered
     const whenclicked=(goto)=>{
         swicthPage(`${goto}`);
     }
@@ -13,12 +20,10 @@ const Nav=()=> {
     return(
         <>
             <h1 loadheader="yes">
-                Home
-                <button id="menu" >
-                    <div id="line"></div>
-                </button>
+                {page}
+                <Hambutton clickHandler={hamClicked}/>
             </h1>
-            <nav>
+            <nav className={smallNavVis?"navVis":"navInvis"}>
                 <button id="button-x" ></button>
                 <Navbutton clickHandler={whenclicked} pageinfo={page} space={true}>Home</Navbutton>
                 <Navbutton clickHandler={whenclicked} pageinfo={page}>Basics</Navbutton>	
@@ -30,9 +35,9 @@ const Nav=()=> {
                     </div>
                 </button>
             </nav>
-            <span id="open" className="select"></span>
+            <span id={smallNavVis?"navFocus":"navFocusNone"} className="select"></span>
         </>
     )
 }
 
-export {Nav};
+export default Nav;

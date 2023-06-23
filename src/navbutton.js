@@ -8,4 +8,4 @@ const Navbutton=({children, space, pageinfo, clickHandler})=>{
     )
 }
 
-export {Navbutton};
+export default Navbutton;
