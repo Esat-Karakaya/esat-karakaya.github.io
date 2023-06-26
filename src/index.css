@@ -9,10 +9,25 @@ body,html{
 button{
 	all: unset;
 }
+#content{
+	overflow-y: hidden;
+	text-align: center;
+	font-size: 18px;
+	margin: 15px 30px;
+}
+
+/*Page Basic Styles*/
+#pageContainer{
+	width: 1vw;
+}
 h2{
+	background: var(--nav-backround);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	font-family: 'Oxanium', sans-serif;
-	font-size: 2.5em;
-	margin: 1em 0 0 0;
+	font-size: 3.5rem;
+	margin: .5rem 0 0 0;
 }
 h3{
 	text-align: left;
@@ -22,9 +37,5 @@ h3{
 }
 p{
 	text-align: left;
-}
-#content{
-	text-align: center;
-	font-size: 18px;
-	margin: 15px 30px;
+	font-family: 'Varela Round', sans-serif;
 }
