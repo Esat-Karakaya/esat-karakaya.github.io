@@ -6,7 +6,7 @@ const AboutPage=()=>{
     const submitHandle=(e)=>{
         e.preventDefault();
         const currentuser=new FormData(e.target).get("text").toLowerCase()
-        if (currentuser) {
+        if (!currentuser) {
             setuser(currentuser)
             fetch(`https://api.github.com/users/${currentuser}/repos`)
             .then((jsonObj)=>jsonObj.json())
