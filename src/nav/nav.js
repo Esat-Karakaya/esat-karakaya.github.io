@@ -1,7 +1,7 @@
 import "./navstyle.css";
-import Navbutton from "./navbutton";
+import Navbutton from "./navbutton/navbutton";
+import Hambutton from "./hambutton/hambutton";
 import { useState } from "react";
-import Hambutton from "./hambutton";
 const Nav=()=> {
     //Creating states
     const[page,swicthPage]=useState("About");

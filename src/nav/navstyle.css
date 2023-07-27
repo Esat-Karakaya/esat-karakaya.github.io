@@ -40,6 +40,7 @@ nav *{
 	overflow-y: auto;
 	pointer-events: auto;
 }
+
 h1{
 	font-family: 'Ubuntu', sans-serif;
 	margin: 0;
@@ -47,47 +48,6 @@ h1{
 	padding: 0 0 0 40px;
 	background-image: var(--nav-backround);
 }
-
-/*NavButton*/
-#place{
-	cursor: context-menu;
-}
-#place::before, .link::before{
-	position: absolute;
-	content: "";
-	background-color: var(--page-line);
-	padding: 0px;
-	height: 3px;
-	width: 100%;
-	bottom: 0;
-}
-.link::before{
-	position: absolute;
-	content: "";
-	background-color: var(--page-line);
-	padding: 0px;
-	height: 3px;
-	width: 100%;
-	bottom: 0;
-	left: 0;
-	transform: scaleX(0);
-	transition: all 0.3s;
-}
-#place::before{transform: scaleX(1);}
-.link:hover:before{transform: scaleX(1);}
-
-.link, #end{
-	padding: 15px 10px 15px 10px;
-	font-family: 'Varela Round', sans-serif;
-	color: black;
-	font-size: 20px;
-	background-image: var(--nav-button-color);
-	cursor: pointer;
-	position: relative;
-	margin: 0 2px;
-	border-radius: 10px 10px 0 0;
-}
-
 @media screen and (max-width: 600px){
 	/*DROPDOWN, NAVBUTTON*/
 	#end{
@@ -99,17 +59,6 @@ h1{
 		width: 90%;
 		border-radius: 0;
 		position: relative;
-	}
-	.link::before{
-		height: 3px;
-		width: 0;
-		bottom: 0;
-		left: 0;
-		transform: none;
-		transition: all 0.3s;
-	}
-	.link:hover:before{
-		width: 100%;
 	}
 
 	/*NAV TOGGLE ANIMATION*/
@@ -141,8 +90,7 @@ h1{
 		transition: background-color 1s ease;
 	}	
 
-	
-
+	/*X Button*/
 	#button-x{
 		position: absolute;
 		cursor: pointer;

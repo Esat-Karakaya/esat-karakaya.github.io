@@ -1,4 +1,4 @@
-import Nav from "./nav";
+import Nav from "./nav/nav";
 import Content from "./content";
 
 const App=()=> {

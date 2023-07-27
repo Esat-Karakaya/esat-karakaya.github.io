@@ -1,3 +1,4 @@
+import "./navbutton.css";
 const Navbutton=({children, space, pageinfo, clickHandler})=>{
     return(
         <button onClick={()=>{clickHandler(children)}} id={pageinfo===children ? "place":""} className={"link"+(space ?" space":"")}>
