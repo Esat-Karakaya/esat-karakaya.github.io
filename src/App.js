@@ -1,5 +1,5 @@
 import Nav from "./nav/nav";
-import Content from "./content";
+import Content from "./content/content";
 
 const App=()=> {
     return(
