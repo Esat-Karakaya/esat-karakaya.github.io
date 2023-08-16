@@ -2,9 +2,8 @@ import "./navstyle.css";
 import Navbutton from "./navbutton/navbutton";
 import Hambutton from "./hambutton/hambutton";
 import { useState } from "react";
-const Nav=()=> {
+const Nav=({page, swicthPage})=> {
     //Creating states
-    const[page,swicthPage]=useState("About");
     const[smallNavVis,newsmalldis]=useState(false);
 
     //If hamButton gets clicked this gets triggered

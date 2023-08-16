@@ -1,7 +1,7 @@
 const FrontEndPage=()=>{
     return(
         <div className="pageContainer">
-            <h2>Introduction</h2>
+            <h2>Front End</h2>
         </div>
     )
 }
