@@ -1,3 +1,4 @@
+alert("Site is uncomplete")
 //setting definitions
 const button = document.querySelector("#button-x");
 const nav=document.getElementsByTagName('nav')[0];
