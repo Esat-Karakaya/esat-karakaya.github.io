@@ -13,18 +13,18 @@ const Nav=({page, swicthPage})=> {
 
     //When navButton gets clicked this gets triggered
     const whenclicked=(goto)=>{
-        swicthPage(`${goto}`);
+        swicthPage(goto);
     }
     const buttonValues = ["About", "Front-End", "Back-End", "Education"]
     return(
         <>
             <h1>
-                {page}
+                {buttonValues[page]}
                 <Hambutton clickHandler={hamClicked}/>
             </h1>
             <nav className={smallNavVis?"navVis":"navInvis"}>
                 <button onClick={()=>{newsmalldis(false)}} id="button-x" ></button>
-                {buttonValues.map((value,i)=><Navbutton clickHandler={whenclicked} key={value} id={i} pageinfo={page}>{value}</Navbutton>)}
+                {buttonValues.map((value,i)=><Navbutton clickHandler={whenclicked} key={value} id={i} page={page}>{value}</Navbutton>)}
                 <button id="end">Contact
                     <div>
                         <div className="dropterms">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quibusdam.</div>

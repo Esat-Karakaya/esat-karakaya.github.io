@@ -1,11 +1,10 @@
 import "./navbutton.css";
-const Navbutton=({children, pageinfo, clickHandler, id})=>{
+const Navbutton=({children, page, clickHandler, id})=>{
     const onClick=()=>{
-        document.getElementById("page"+id).scrollIntoView({behavior:"smooth"})
-        clickHandler(children)
+        clickHandler(id)
     }
     return(
-        <button onClick={onClick} id={pageinfo===children ? "place":""} className={"link"}>
+        <button onClick={onClick} id={page==id ? "place":""} className={"link"}>
             {children}
         </button>
     )
