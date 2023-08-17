@@ -1,0 +1,128 @@
+nav{
+	padding: 0 10px;
+	position: sticky;
+	top: 0;
+	background-image: var(--nav-backround);
+	box-shadow: 0 10px 10px rgba(0,0,0,0.4);
+	z-index: 1;
+}
+nav *{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*DROPDOWN*/
+#end{
+	float: right;
+}
+#end:focus{
+	pointer-events: none;
+}
+#end>div{
+	background-color: red;
+	padding: 10px;
+	display: none;
+	position: absolute;
+	right: 10px;
+}
+#end:focus>div{
+	display: block;
+}
+.dropterms{
+	display: block;
+	background-color: red;
+	height: 150px;
+	width: 200px;
+	overflow-y: auto;
+	pointer-events: auto;
+}
+
+h1{
+	font-family: 'Ubuntu', sans-serif;
+	margin: 0;
+	font-size: 5em;
+	padding: 0 0 0 40px;
+	background-image: var(--nav-backround);
+}
+@media screen and (max-width: 600px){
+	/*DROPDOWN, NAVBUTTON*/
+	#end{
+		margin:5px 0 0 0;
+		float: none;
+	}
+	.link,#end{
+		margin-left: 0;
+		width: 90%;
+		border-radius: 0;
+		position: relative;
+	}
+
+	/*NAV TOGGLE ANIMATION*/
+	nav{
+		display: inline-block;
+		position: fixed;
+		left: -200px;
+		height: 100%;
+		width: 200px;
+		margin: 0;
+		padding: 0;
+		transition: left 0.2s ease;
+	}
+	.navVis{
+		left:0;
+	}
+	#navFocus{
+		background-color: rgba(0,0,0,0.4);
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 0;
+		transition: background-color 1s ease;
+	}
+	#navFocusNone{
+		background-color: rgba(0,0,0,0);
+		transition: background-color 1s ease;
+	}	
+
+	/*X Button*/
+	#button-x{
+		position: absolute;
+		cursor: pointer;
+		width: 4px;
+		height: 4px;
+		padding: 15px;
+		top: 0;
+		right: 0;
+		z-index: 1;
+	}
+	#button-x::before{
+		content: "";
+		position: absolute;
+		right: 4px;
+		background-color: black;
+		height: 3px;
+		width: 25px;
+		border-radius: 2px;
+		transform: rotate(-45deg);
+	}
+	#button-x::after{
+		content: "";
+		position: absolute;
+		right: 4px;
+		background-color: black;
+		height: 3px;
+		width: 25px;
+		border-radius: 2px;
+		transform: rotate(45deg);
+	}
+	@keyframes leave{
+		0%{width: 100%;}
+		100%{width: 0%;}
+	}
+}

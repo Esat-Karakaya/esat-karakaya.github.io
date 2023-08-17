@@ -1,0 +1,11 @@
+#root{
+	--nav-backround: linear-gradient(to right,#032dfc, #a803fc);
+	--page-line:black ;
+	--nav-button-color: linear-gradient(to right,#00ffc4, #03cefc);
+}
+body,html{
+	margin: 0;
+}
+button{
+	all: unset;
+}
