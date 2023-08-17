@@ -1,6 +1,6 @@
 const BackEnd=()=>{
     return(
-        <div className="page">
+        <div id="page2" className="page">
             <h2>My Back End Skills</h2>
         </div>
     )

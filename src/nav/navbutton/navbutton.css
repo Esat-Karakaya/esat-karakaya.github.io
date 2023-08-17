@@ -24,6 +24,7 @@
 }
 #place::before{transform: scaleX(1);}
 .link:hover:before{transform: scaleX(1);}
+.link:focus-visible:before{transform: scaleX(1);}
 
 .link, #end{
 	padding: 15px 10px 15px 10px;
@@ -52,6 +53,9 @@
 		transition: all 0.3s;
 	}
 	.link:hover:before{
+		width: 100%;
+	}
+	.link:focus-visible:before{
 		width: 100%;
 	}
 }

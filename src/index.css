@@ -9,3 +9,6 @@ body,html{
 button{
 	all: unset;
 }
+button:focus-visible{
+	outline: -webkit-focus-ring-color auto 1px;
+}

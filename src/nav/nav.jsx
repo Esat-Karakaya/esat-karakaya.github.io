@@ -24,10 +24,10 @@ const Nav=({page, swicthPage})=> {
             </h1>
             <nav className={smallNavVis?"navVis":"navInvis"}>
                 <button onClick={()=>{newsmalldis(false)}} id="button-x" ></button>
-                {buttonValues.map((value,i)=><Navbutton clickHandler={whenclicked} key={i} pageinfo={page}>{value}</Navbutton>)}
+                {buttonValues.map((value,i)=><Navbutton clickHandler={whenclicked} key={value} id={i} pageinfo={page}>{value}</Navbutton>)}
                 <button id="end">Contact
                     <div>
-                        <div className="dropterms">hello Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamquis nostrud exe</div>
+                        <div className="dropterms">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quibusdam.</div>
                     </div>
                 </button>
             </nav>
