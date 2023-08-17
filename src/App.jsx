@@ -1,5 +1,5 @@
 import Nav from "./nav/nav";
-import Content from "./content/content";
+import PageContainer from "./pageContainer/pageContainer";
 import { useState } from "react";
 
 const App=()=> {
@@ -7,7 +7,7 @@ const App=()=> {
     return(
         <>
             <Nav page={page} swicthPage={swicthPage}/>
-            <Content/>
+            <PageContainer/>
         </>
     )
 }

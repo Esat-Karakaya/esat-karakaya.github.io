@@ -15,7 +15,7 @@ const Nav=({page, swicthPage})=> {
     const whenclicked=(goto)=>{
         swicthPage(`${goto}`);
     }
-    
+    const buttonValues = ["About", "Front-End", "Back-End", "Education"]
     return(
         <>
             <h1>
@@ -24,10 +24,7 @@ const Nav=({page, swicthPage})=> {
             </h1>
             <nav className={smallNavVis?"navVis":"navInvis"}>
                 <button onClick={()=>{newsmalldis(false)}} id="button-x" ></button>
-                <Navbutton clickHandler={whenclicked} pageinfo={page} space={true}>About</Navbutton>
-                <Navbutton clickHandler={whenclicked} pageinfo={page}>Front-End</Navbutton>	
-                <Navbutton clickHandler={whenclicked} pageinfo={page}>Back-End</Navbutton>
-                <Navbutton clickHandler={whenclicked} pageinfo={page}>Education</Navbutton>
+                {buttonValues.map((value,i)=><Navbutton clickHandler={whenclicked} key={i} pageinfo={page}>{value}</Navbutton>)}
                 <button id="end">Contact
                     <div>
                         <div className="dropterms">hello Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamquis nostrud exe</div>
