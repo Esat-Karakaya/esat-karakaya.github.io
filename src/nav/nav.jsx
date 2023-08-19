@@ -2,10 +2,11 @@ import "./navstyle.css";
 import Navbutton from "./navbutton/navbutton";
 import Hambutton from "./hambutton/hambutton";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useAtom } from "jotai";
+import { pageAtom } from "../jotai/atoms";
 
 const Nav=()=> {
-    const pageId=useSelector((state)=>state.pageSlice.pageId)
+    const [pageId]=useAtom(pageAtom);
     const[smallNavVis,newsmalldis]=useState(false);
 
     const hamClicked=()=>{
@@ -21,7 +22,7 @@ const Nav=()=> {
             </h1>
             <nav className={smallNavVis?"navVis":"navInvis"}>
                 <button onClick={()=>{newsmalldis(false)}} id="button-x" ></button>
-                {buttonValues.map((value,i)=><Navbutton key={value} id={i} pageId={pageId}>{value}</Navbutton>)}
+                {buttonValues.map((value,i)=> <Navbutton key={value} id={i} >{value}</Navbutton>)}
                 <button id="end">Contact
                     <div>
                         <div className="dropterms">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quibusdam.</div>

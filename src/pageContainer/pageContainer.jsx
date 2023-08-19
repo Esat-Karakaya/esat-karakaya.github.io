@@ -4,10 +4,11 @@ import About from "./pages/About";
 import Education from "./pages/Education";
 import "./pageStyle.css";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useAtom } from "jotai";
+import { pageAtom } from "../jotai/atoms";
 
 const PageContainer=()=>{
-    const pageId=useSelector((state)=>state.pageSlice.pageId)
+    const [pageId]=useAtom(pageAtom)
     useEffect(()=>{
         console.log(pageId)
         document.getElementById("page"+pageId)

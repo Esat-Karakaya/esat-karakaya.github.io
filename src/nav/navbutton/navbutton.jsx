@@ -1,14 +1,14 @@
 import "./navbutton.css";
-import { useDispatch } from "react-redux";
-import { pageActions } from "../../redux/store";
+import { useAtom } from "jotai";
+import { pageAtom } from "../../jotai/atoms";
 
-const Navbutton=({children, pageId, id})=>{
-    const dispatch=useDispatch()
+const Navbutton=({children, id})=>{
+    const [pageId,switchPage]=useAtom(pageAtom)
     const whenclicked=()=>{
-        dispatch(pageActions.switchPage(id))
+        switchPage(id)
     }
     return(
-        <button onClick={whenclicked} id={pageId==id ? "place":""} className={"link"}>
+        <button onClick={whenclicked} id={pageId==id ? "place":""} className="link">
             {children}
         </button>
     )
