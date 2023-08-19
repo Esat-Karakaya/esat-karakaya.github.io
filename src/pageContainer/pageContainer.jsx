@@ -10,9 +10,16 @@ import { pageAtom } from "../jotai/atoms";
 const PageContainer=()=>{
     const [pageId]=useAtom(pageAtom)
     useEffect(()=>{
-        console.log(pageId)
-        document.getElementById("page"+pageId)
-        .scrollIntoView({behavior:"smooth"})
+        const currentPage=document.getElementById("page"+pageId)
+        currentPage.scrollIntoView({behavior:"smooth"})
+
+        const adjustPage=()=>currentPage.scrollIntoView()
+        window.addEventListener('resize',adjustPage);
+
+        return(()=>{
+            window.removeEventListener('resize',adjustPage)
+            console.log("Yay")
+        })
     },[pageId])
 
     return(
