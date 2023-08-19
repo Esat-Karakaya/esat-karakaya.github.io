@@ -2,29 +2,26 @@ import "./navstyle.css";
 import Navbutton from "./navbutton/navbutton";
 import Hambutton from "./hambutton/hambutton";
 import { useState } from "react";
-const Nav=({page, swicthPage})=> {
-    //Creating states
+import { useSelector } from "react-redux";
+
+const Nav=()=> {
+    const pageId=useSelector((state)=>state.pageSlice.pageId)
     const[smallNavVis,newsmalldis]=useState(false);
 
-    //If hamButton gets clicked this gets triggered
     const hamClicked=()=>{
         newsmalldis(true);
     }
-
-    //When navButton gets clicked this gets triggered
-    const whenclicked=(goto)=>{
-        swicthPage(goto);
-    }
+    
     const buttonValues = ["About", "Front-End", "Back-End", "Education"]
     return(
         <>
             <h1>
-                {buttonValues[page]}
+                {buttonValues[pageId]}
                 <Hambutton clickHandler={hamClicked}/>
             </h1>
             <nav className={smallNavVis?"navVis":"navInvis"}>
                 <button onClick={()=>{newsmalldis(false)}} id="button-x" ></button>
-                {buttonValues.map((value,i)=><Navbutton clickHandler={whenclicked} key={value} id={i} page={page}>{value}</Navbutton>)}
+                {buttonValues.map((value,i)=><Navbutton key={value} id={i} pageId={pageId}>{value}</Navbutton>)}
                 <button id="end">Contact
                     <div>
                         <div className="dropterms">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quibusdam.</div>

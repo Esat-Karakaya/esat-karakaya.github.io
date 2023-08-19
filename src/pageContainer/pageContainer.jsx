@@ -4,12 +4,15 @@ import About from "./pages/About";
 import Education from "./pages/Education";
 import "./pageStyle.css";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
-const PageContainer=({page})=>{
+const PageContainer=()=>{
+    const pageId=useSelector((state)=>state.pageSlice.pageId)
     useEffect(()=>{
-        document.getElementById("page"+page)
+        console.log(pageId)
+        document.getElementById("page"+pageId)
         .scrollIntoView({behavior:"smooth"})
-    },[page])
+    },[pageId])
 
     return(
         <div id="pageContainer">

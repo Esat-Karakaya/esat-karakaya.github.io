@@ -1,10 +1,14 @@
 import "./navbutton.css";
-const Navbutton=({children, page, clickHandler, id})=>{
-    const onClick=()=>{
-        clickHandler(id)
+import { useDispatch } from "react-redux";
+import { pageActions } from "../../redux/store";
+
+const Navbutton=({children, pageId, id})=>{
+    const dispatch=useDispatch()
+    const whenclicked=()=>{
+        dispatch(pageActions.switchPage(id))
     }
     return(
-        <button onClick={onClick} id={page==id ? "place":""} className={"link"}>
+        <button onClick={whenclicked} id={pageId==id ? "place":""} className={"link"}>
             {children}
         </button>
     )
