@@ -8,15 +8,12 @@
 .page{
 	min-width: 100vw;
 }
-h1{
-	font-weight: 500;
-}
 h2{
 	background: var(--nav-backround);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-family: 'Oxanium', sans-serif;
+	font-family: 'Nunito', sans-serif;
 	font-size: 3.5rem;
 	margin: .5rem 0 0 0;
 	font-weight: 500;
