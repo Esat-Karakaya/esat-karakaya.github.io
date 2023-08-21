@@ -1,3 +1,6 @@
+.link,#end{
+	user-select: none;
+}
 nav{
 	padding: 0 10px;
 	position: sticky;
