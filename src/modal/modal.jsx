@@ -1,18 +1,21 @@
 import { useEffect } from "react";
 import { modalAtom } from "../jotai/atoms";
-import { useAtom } from "jotai";
+import { useAtom } from "jotai"
 const ContactForm=()=>{
-    const [visible]=useAtom(modalAtom);
+    const [visible, changeVisibility]=useAtom(modalAtom);
+    const onClose=()=>{
+        changeVisibility(false)
+    }
     useEffect(()=>{
-        const contactForm=document.querySelector("#contactForm")
+        const modal=document.querySelector("#contactForm")
         if (visible) {
-            contactForm.showModal()
-        } else {
-            contactForm.close()
+            modal.showModal()
+            return;
         }
+        modal.close()
     },[visible])
     return(
-        <dialog id="contactForm">
+        <dialog id="contactForm" onCancel={onClose}>
             Hellooo World
         </dialog>
     )
