@@ -18,7 +18,6 @@ const PageContainer=()=>{
 
         return(()=>{
             window.removeEventListener('resize',adjustPage)
-            console.log("Yay")
         })
     },[pageId])
 

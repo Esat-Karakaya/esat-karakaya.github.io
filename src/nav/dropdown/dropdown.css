@@ -1,9 +1,6 @@
 #end{
 	float: right;
 }
-#end:focus{
-	pointer-events: none;
-}
 #end:focus>.dropterms{
 	opacity: .5;
 	transform: translateY(16px);
