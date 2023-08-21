@@ -1,6 +1,7 @@
 import "./navstyle.css";
 import Navbutton from "./navbutton/navbutton";
 import Hambutton from "./hambutton/hambutton";
+import Dropdown from "./dropdown/dropdown";
 import { useState } from "react";
 import { useAtom } from "jotai";
 import { pageAtom } from "../jotai/atoms";
@@ -23,11 +24,7 @@ const Nav=()=> {
             <nav className={smallNavVis?"navVis":"navInvis"}>
                 <button onClick={()=>{newsmalldis(false)}} id="button-x" ></button>
                 {buttonValues.map((value,i)=> <Navbutton key={value} id={i} >{value}</Navbutton>)}
-                <button id="end">Contact
-                    <div>
-                        <div className="dropterms">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quibusdam.</div>
-                    </div>
-                </button>
+                <Dropdown/>
             </nav>
             <span id={smallNavVis?"navFocus":"navFocusNone"} className="select"></span>
         </>
