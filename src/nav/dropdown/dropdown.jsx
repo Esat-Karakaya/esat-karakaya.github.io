@@ -1,9 +1,9 @@
+import "./dropdown.css";
+
 const Dropdown=()=>{
     return(
         <button id="end">Contact
-            <div>
-                <div className="dropterms"></div>
-            </div>
+            <div className="dropterms"></div>
         </button>
     )
 }

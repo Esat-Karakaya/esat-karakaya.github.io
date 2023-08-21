@@ -3,7 +3,7 @@ nav{
 	position: sticky;
 	top: 0;
 	background-image: var(--nav-backround);
-	box-shadow: 0 10px 10px rgba(0,0,0,0.4);
+	box-shadow: 0 5px 5px rgba(0,0,0,0.4);
 	z-index: 1;
 }
 nav *{
@@ -14,33 +14,6 @@ nav *{
   -ms-user-select: none;
   user-select: none;
 }
-
-/*DROPDOWN*/
-#end{
-	float: right;
-}
-#end:focus{
-	pointer-events: none;
-}
-#end>div{
-	background-color: red;
-	padding: 10px;
-	display: none;
-	position: absolute;
-	right: 10px;
-}
-#end:focus>div{
-	display: block;
-}
-.dropterms{
-	display: block;
-	background-color: red;
-	height: 150px;
-	width: 200px;
-	overflow-y: auto;
-	pointer-events: auto;
-}
-
 h1{
 	font-family: 'Ubuntu', sans-serif;
 	margin: 0;
@@ -50,10 +23,6 @@ h1{
 }
 @media screen and (max-width: 600px){
 	/*DROPDOWN, NAVBUTTON*/
-	#end{
-		margin:5px 0 0 0;
-		float: none;
-	}
 	.link,#end{
 		margin-left: 0;
 		width: 90%;
@@ -125,4 +94,5 @@ h1{
 		0%{width: 100%;}
 		100%{width: 0%;}
 	}
+	h1{padding-bottom:.25rem;}
 }
