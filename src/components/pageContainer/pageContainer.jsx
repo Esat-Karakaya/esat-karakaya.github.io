@@ -2,7 +2,7 @@ import BackEnd from "../pages/Back-End";
 import FrontEnd from "../pages/Front-End";
 import About from "../pages/About";
 import Education from "../pages/Education";
-import "./pageStyle.css";
+import "../pages/pageStyles.css";
 import { useEffect } from "react";
 import { useAtom } from "jotai";
 import { pageAtom } from "../../jotai/atoms";
