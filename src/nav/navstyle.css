@@ -1,3 +1,6 @@
+#end{
+	float: right;
+}
 .link,#end{
 	user-select: none;
 }
@@ -27,6 +30,10 @@ h1{
 }
 @media screen and (max-width: 600px){
 	/*DROPDOWN, NAVBUTTON*/
+	#end{
+        margin:5px 0 0 0;
+        float: none;
+    }
 	.link,#end{
 		margin-left: 0;
 		width: 90%;
@@ -65,19 +72,19 @@ h1{
 
 	/*X Button*/
 	#button-x{
+		display: flex;
 		position: absolute;
 		cursor: pointer;
-		width: 4px;
-		height: 4px;
-		padding: 15px;
+		width: 2em;
+		height: 2em;
 		top: 0;
 		right: 0;
 		z-index: 1;
+		justify-content: center;
+		align-items: center;
 	}
 	#button-x::before{
 		content: "";
-		position: absolute;
-		right: 4px;
 		background-color: black;
 		height: 3px;
 		width: 25px;
@@ -87,7 +94,6 @@ h1{
 	#button-x::after{
 		content: "";
 		position: absolute;
-		right: 4px;
 		background-color: black;
 		height: 3px;
 		width: 25px;
