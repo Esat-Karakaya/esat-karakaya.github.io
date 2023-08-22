@@ -12,6 +12,26 @@ button{
 button:focus-visible{
 	outline: -webkit-focus-ring-color auto 1px;
 }
+a{
+	--aTagColor:#00d9ff;
+	text-decoration: none;
+	position: relative;
+	color: var(--aTagColor);
+}
+a::before{
+	position: absolute;
+	content: "";
+	background-color: var(--aTagColor);
+	height: 3px;
+	width: 0;
+	bottom: 0;
+	left: 0;
+	transition: all 0.3s;
+}
+a:hover:before{
+	width: 100%;
+	transform: scaleX(.5);
+}
 .button-x{
 	border-radius: .5em;
 	display: flex;
