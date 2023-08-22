@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { modalAtom } from "../jotai/atoms";
+import { modalAtom } from "../../jotai/atoms";
 import { useAtom } from "jotai"
 import "./formStyle.css";
 const ContactForm=()=>{

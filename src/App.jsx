@@ -1,6 +1,6 @@
-import Nav from "./nav/nav";
-import PageContainer from "./pageContainer/pageContainer";
-import ContactForm from "./modal/modal"
+import Nav from "./components/nav/nav";
+import PageContainer from "./components/pageContainer/pageContainer";
+import ContactForm from "./components/modal/modal"
 
 const App=()=> {
     return(

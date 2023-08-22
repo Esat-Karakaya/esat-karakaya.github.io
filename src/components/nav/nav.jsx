@@ -1,9 +1,9 @@
 import "./navstyle.css";
-import Navbutton from "./navbutton/navbutton";
-import Hambutton from "./hambutton/hambutton";
+import Navbutton from "../navbutton/navbutton";
+import Hambutton from "../hambutton/hambutton";
 import { useState } from "react";
 import { useAtom } from "jotai";
-import { pageAtom, modalAtom } from "../jotai/atoms";
+import { pageAtom, modalAtom } from "../../jotai/atoms";
 
 const Nav=()=> {
     const [pageId]=useAtom(pageAtom);
