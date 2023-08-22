@@ -27,7 +27,8 @@ const Nav=()=> {
                 <Hambutton clickHandler={hamClicked}/>
             </h1>
             <nav className={smallNavVis?"navVis":"navInvis"}>
-                <button onClick={()=>{newsmalldis(false)}} id="button-x" ></button>
+                <button onClick={()=>{newsmalldis(false)}} id="nav-x" className="button-x" ></button>
+                
                 {buttonValues.map((value,i)=> <Navbutton key={value} id={i} >{value}</Navbutton>)}
                 <button id="end" onClick={showModal}>Contact</button>
             </nav>

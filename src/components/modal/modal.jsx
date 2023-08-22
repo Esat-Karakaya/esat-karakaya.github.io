@@ -19,6 +19,7 @@ const ContactForm=()=>{
 
     return(
         <dialog id="contactForm" onCancel={closeModal}>
+            <button className="button-x" onClick={closeModal}></button>
         </dialog>
     )
 }
