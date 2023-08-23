@@ -32,6 +32,11 @@ a:hover:before{
 	width: 100%;
 	transform: scaleX(.5);
 }
+
+figure{
+    margin: 0;
+}
+
 .button-x{
 	border-radius: .5em;
 	display: flex;
