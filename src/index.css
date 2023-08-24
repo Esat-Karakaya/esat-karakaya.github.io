@@ -1,4 +1,7 @@
 #root{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 	--nav-backround: linear-gradient(to right,#032dfc, #a803fc);
 	--page-line:black ;
 	--nav-button-color: linear-gradient(to right,#00ffc4, #03cefc);
@@ -11,7 +14,10 @@ button{
 }
 button:focus-visible{
 	outline: -webkit-focus-ring-color auto 1px;
+	outline: -moz-mac-focusring auto 1px;
+	outline: -ms-focusring auto 1px;
 }
+*{font-size: 18px;}
 a{
 	--aTagColor:#00d9ff;
 	text-decoration: none;
@@ -34,7 +40,7 @@ a:hover:before{
 }
 
 figure{
-    margin: 0;
+    margin: .5em;
 }
 
 .button-x{

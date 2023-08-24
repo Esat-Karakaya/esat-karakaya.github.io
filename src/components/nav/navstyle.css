@@ -1,83 +1,38 @@
 nav{
 	padding: 0 10px;
-	position: sticky;
-	top: 0;
 	background-image: var(--nav-backround);
 	box-shadow: 0 5px 5px rgba(0,0,0,0.4);
-	z-index: 1;
 }
-nav *{
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-h1{
-	font-family: 'Nunito', sans-serif;
-	margin: 0;
-	font-size: 5em;
-	font-weight: 500;
-	padding: 0 0 0 40px;
-	background-image: var(--nav-backround);
-}
-#nav-x{
-	display: none;
-}
-#end{
-	float: right;
-}
-.link,#end{
-	user-select: none;
-}
+
+#nav-x{display: none;}
+#end{float: right;}
+.link,#end{user-select: none;}
+
 @media screen and (max-width: 600px){
-	/*DROPDOWN, NAVBUTTON*/
+	/*NAVBUTTON*/
 	#end{
-        margin:5px 0 0 0;
+        margin-top: 5px;
         float: none;
     }
 	.link,#end{
+		box-sizing: border-box;
 		margin-left: 0;
-		width: 90%;
+		width: 100%;
 		border-radius: 0;
 		position: relative;
 	}
 
 	/*NAV TOGGLE ANIMATION*/
 	nav{
-		display: inline-block;
 		position: fixed;
 		left: -200px;
-		height: 100%;
+		top: 0;
+		bottom: 0;
 		width: 200px;
-		margin: 0;
 		padding: 0;
+		z-index: 1;
 		transition: left 0.2s ease;
 	}
-	.navVis{
-		left:0;
-	}
-	#navFocus{
-		background-color: rgba(0,0,0,0.4);
-		display: inline-block;
-		height: 100%;
-		width: 100%;
-		position: fixed;
-		top: 0;
-		z-index: 0;
-		transition: background-color 1s ease;
-	}
-	#navFocusNone{
-		background-color: rgba(0,0,0,0);
-		transition: background-color 1s ease;
-	}	
-	#nav-x{
-		display: flex;
-	}
-	@keyframes leave{
-		0%{width: 100%;}
-		100%{width: 0%;}
-	}
-	h1{padding-bottom:.25rem;}
+	.navVis{left:0;}
+	#nav-x{display: flex;}
 }

@@ -1,12 +1,17 @@
-#menu{
+#hambutton{
 	display: none;
-	margin-left: 40px;
+	background-image: var(--nav-backround);
+	padding: .25em 0;
 }
 
 @media screen and (max-width: 600px){
+	#hambutton{
+		display: block;
+	}
     #menu{
-		padding: 4px;
 		display: flex;
+		margin-left: 40px;
+		padding: 4px;
 		height: 20px;
 		flex-direction: column;
 		justify-content: space-between;

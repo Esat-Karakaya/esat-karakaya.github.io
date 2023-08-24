@@ -1,7 +1,7 @@
 #pageContainer{
+	flex-grow: 1;
 	display: flex;
 	overflow-x: hidden;
-	font-size: 18px;
 }
 
 /*Page Basic Styles*/
@@ -9,8 +9,9 @@
     box-sizing: border-box;
 	min-width: 100vw;
     padding:0 2em;
+	overflow-y: auto;
 }
-h2{
+h1{
 	background: var(--nav-backround);
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -22,17 +23,24 @@ h2{
 	text-align: center;
 	font-family: 'Nunito', sans-serif;
 }
-h3{
+h2{
 	font-family: 'Nunito', sans-serif;
 	font-size: 2rem;
 	font-weight: lighter;
 	margin: 0;
 }
-section{
-	display: flex;
-	align-items: center;
-}
 p{
 	text-align: left;
 	font-family: 'Montserrat', sans-serif;
+}
+
+/*section spesifics*/
+#greet{
+	display: flex;
+	align-items: center
+}
+@media screen and (max-width: 700px) {
+	#greet{
+		flex-direction: column;
+	}
 }
