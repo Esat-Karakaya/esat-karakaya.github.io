@@ -14,7 +14,18 @@ const Nav=()=> {
     }
 
     const hamClicked=()=>{
-        newsmalldis(true);
+        document.querySelector("nav").style.display="block"
+        setTimeout(()=>{
+            newsmalldis(true);
+        },0)
+        
+    }
+
+    const hideNav=()=>{
+        newsmalldis(false)
+        setTimeout(()=>{
+            document.querySelector("nav").style.display="none"
+        },200)
     }
     
     const buttonValues = ["About", "Front-End", "Back-End", "Education"]
@@ -22,7 +33,7 @@ const Nav=()=> {
         <>
             <Hambutton clickHandler={hamClicked}/>
             <nav className={smallNavVis?"navVis":""}>
-                <button onClick={()=>{newsmalldis(false)}} id="nav-x" className="button-x" ></button>
+                <button onClick={hideNav} id="nav-x" className="button-x" ></button>
                 {buttonValues.map((value,i)=> <Navbutton key={value} id={i} >{value}</Navbutton>)}
                 <button id="end" onClick={showModal}>Contact</button>
             </nav>
