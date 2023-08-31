@@ -48,7 +48,7 @@ section{
 	padding: .25em;
 	color: white;
 	font-family: 'Montserrat', sans-serif;
-  }
+}
 .pageButton:active{
 	margin-top: .125em;
 	border-bottom: 0px solid transparent;

@@ -9,7 +9,7 @@ const About=()=>{
             <section>
                 <h1>Hello There!</h1>
                 <div className="flex">
-                    <ContentImg alt="me" imgurl="/me.jpeg"/>
+                    <ContentImg alt="me" imgurl="/me.webp"/>
                     <p>I'm Esat, a 14 year old who has a passion for programming. I'm a self-thought full stack programmer and can both visualize and handle data. But there is much more to that! Which is why i separated them to two different pages. Here i just want to introduce myself 😉</p>
                 </div>
                 <button onClick={startViewing} className="pageButton">Let's Start</button>
