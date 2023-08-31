@@ -18,7 +18,6 @@ const Nav=()=> {
         setTimeout(()=>{
             newsmalldis(true);
         },0)
-        
     }
 
     const hideNav=()=>{
