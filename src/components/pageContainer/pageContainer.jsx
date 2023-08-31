@@ -1,8 +1,8 @@
-import BackEnd from "../pages/Back-End";
-import FrontEnd from "../pages/Front-End";
-import About from "../pages/About";
-import Education from "../pages/Education";
-import "../pages/pageStyles.css";
+import BackEnd from "../pageContents/Back-End";
+import FrontEnd from "../pageContents/Front-End";
+import About from "../pageContents/About";
+import Education from "../pageContents/Education";
+import "../pageContents/pageStyles.css";
 import { useEffect } from "react";
 import { useAtom } from "jotai";
 import { pageAtom } from "../../jotai/atoms";

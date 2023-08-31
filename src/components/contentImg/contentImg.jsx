@@ -1,8 +1,8 @@
 import "./imgStyle.css"
-const ContentImg=({description, imgurl})=>{
+const ContentImg=({description, imgurl, alt})=>{
     return (
     <figure>
-        <img className="contentImg" src={imgurl}/>
+        <img alt={alt} className="contentImg" src={imgurl}/>
         {description&&<figcaption>{description}</figcaption>}
     </figure>)
 }

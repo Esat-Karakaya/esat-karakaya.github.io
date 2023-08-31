@@ -32,7 +32,7 @@ const Nav=()=> {
         <>
             <Hambutton clickHandler={hamClicked}/>
             <nav className={smallNavVis?"navVis":""}>
-                <button onClick={hideNav} id="nav-x" className="button-x" ></button>
+                <button aria-label="close-Navigation" onClick={hideNav} id="nav-x" className="button-x" ></button>
                 {buttonValues.map((value,i)=> <Navbutton key={value} id={i} >{value}</Navbutton>)}
                 <button id="end" onClick={showModal}>Contact</button>
             </nav>
