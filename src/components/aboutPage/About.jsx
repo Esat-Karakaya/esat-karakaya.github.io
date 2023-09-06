@@ -34,9 +34,9 @@ const About=()=>{
                 <p>If you want to connect with me and check out my work, you can find me on GitHub, LinkedIn and Twitter. Feel free to drop by and say hi! 😎</p>
                 <div className="linkLineup"
                  style={{width:"100%", justifyContent:"center", rowGap:"1rem",columnGap:"5rem"}}>
-                    <a href="#"><img className="profileLink" alt="Github logo" src="https://github.githubassets.com/pinned-octocat.svg"/></a>
+                    <a href="#"><img className="profileLink" alt="Github logo" src="/github.svg"/></a>
                     <a href="#"><img className="profileLink" alt="LinkedIn logo" src="/linkedin.png"/></a>
-                    <a href="#"><img className="profileLink" alt="Twitter logo" src="https://abs.twimg.com/responsive-web/client-web/icon-svg.168b89da.svg"/></a>
+                    <a href="#"><img className="profileLink" alt="Twitter logo" src="/twitter.svg"/></a>
                 </div>
             </section>
         </Page>
