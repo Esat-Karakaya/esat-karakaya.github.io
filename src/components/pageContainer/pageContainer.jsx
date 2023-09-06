@@ -1,6 +1,6 @@
 import BackEnd from "../pageContents/Back-End";
 import FrontEnd from "../pageContents/Front-End";
-import About from "../pageContents/About";
+import About from "../aboutPage/About";
 import Education from "../pageContents/Education";
 import "../pageContents/pageStyles.css";
 import { useEffect } from "react";

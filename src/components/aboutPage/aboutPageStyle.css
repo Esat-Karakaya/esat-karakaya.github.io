@@ -1,0 +1,38 @@
+.pageButton{
+	background-color: #195aff;
+	border-bottom: .125em solid #000a7d;
+	border-radius: .5rem;
+	padding: .25em;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+.pageButton:active{
+	margin-top: .125em;
+	border-bottom: 0px solid transparent;
+}
+
+.lineup, .linkLineup{
+	display: flex;
+	align-items: center;
+}
+@media screen and (max-width: 700px) {
+	.lineup{flex-direction: column;}
+}
+@media screen and (max-width: 500px) {
+	.linkLineup{flex-direction: column;}
+}
+
+.profileLink{
+	filter: brightness(0);
+	height: 5em;
+	width: auto;
+}
+
+.linkLineup>a{
+	transform: scale(1);
+	transition: transform .3s;
+}
+
+.linkLineup>a:hover{
+	transform: scale(1.2);
+}
