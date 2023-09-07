@@ -1,4 +1,5 @@
-.pageButton{
+/*section 1*/
+.startButton{
 	background-color: #195aff;
 	border-bottom: .125em solid #000a7d;
 	border-radius: .5rem;
@@ -6,7 +7,7 @@
 	color: white;
 	font-family: 'Montserrat', sans-serif;
 }
-.pageButton:active{
+.startButton:active{
 	margin-top: .125em;
 	border-bottom: 0px solid transparent;
 }
@@ -15,16 +16,14 @@
 	display: flex;
 	align-items: center;
 }
-@media screen and (max-width: 700px) {
-	.lineup{flex-direction: column;}
-}
-@media screen and (max-width: 500px) {
-	.linkLineup{flex-direction: column;}
-}
+@media screen and (max-width: 700px)
+{.lineup{flex-direction: column;}}
 
-.profileLink{
+/*section 2*/
+.logo{
 	filter: brightness(0);
-	height: 5em;
+	height: 20vw;
+	max-height: 6em;
 	width: auto;
 }
 
@@ -32,7 +31,15 @@
 	transform: scale(1);
 	transition: transform .3s;
 }
+.linkLineup>a::before{background-color: black;}
+.linkLineup>a:hover{transform: scale(1.2);}
 
-.linkLineup>a:hover{
-	transform: scale(1.2);
+.logo.reveal{
+	filter: blur(.25em) brightness(0);
+	transform: translateX(-5em);
+	transition: all .5s calc(80ms*var(--order));
+}
+.logo.show{
+	filter: blur(0) brightness(0);
+	transform: translateX(0);
 }
