@@ -35,11 +35,22 @@
 .linkLineup>a:hover{transform: scale(1.2);}
 
 .logo.reveal{
-	filter: blur(.25em) brightness(0);
+	opacity: 0;
 	transform: translateX(-5em);
 	transition: all .5s calc(80ms*var(--order));
 }
 .logo.show{
-	filter: blur(0) brightness(0);
+	opacity: 1;
 	transform: translateX(0);
+}
+
+/*section 3*/
+
+.galeryPhotos{
+	position: absolute;
+	border-radius: 1em;
+	z-index: -1;
+	height: 5em;
+	width: 5em;
+	background-color: red
 }
