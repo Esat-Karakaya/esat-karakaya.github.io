@@ -49,8 +49,7 @@
 .galeryPhotos{
 	position: absolute;
 	border-radius: 1em;
-	z-index: -1;
 	height: 5em;
 	width: 5em;
-	background-color: red
+	background-color: red;
 }
