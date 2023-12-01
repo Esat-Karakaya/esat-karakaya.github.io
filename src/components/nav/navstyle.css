@@ -1,7 +1,6 @@
 nav{
 	padding: 0 10px;
 	background-image: var(--nav-backround);
-	box-shadow: 0 5px 5px rgba(0,0,0,0.4);
 }
 
 #nav-x{display: none;}

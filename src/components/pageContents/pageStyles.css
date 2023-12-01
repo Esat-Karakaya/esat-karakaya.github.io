@@ -10,7 +10,7 @@
 	overflow-y: auto;
 	width: 100vw;
 	flex-shrink: 0;
-	perspective: 25px;
+	perspective: 20px;
 }
 h1{
 	background: var(--nav-backround);
