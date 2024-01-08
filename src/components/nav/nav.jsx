@@ -1,7 +1,7 @@
 import "./navstyle.css";
 import Navbutton from "../navbutton/navbutton";
 import Hambutton from "../hambutton/hambutton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { modalAtom } from "../../jotai/atoms";
 
@@ -9,9 +9,15 @@ const Nav=()=> {
     const [, toggleModal]=useAtom(modalAtom);
     const[smallNavVis,newsmalldis]=useState(false);
 
-    const showModal=()=>{
-        toggleModal(true)
-    }
+    useEffect(()=>{
+        if(window.innerWidth < 800 && !smallNavVis){
+            setTimeout(()=>{
+                document.querySelector("nav").style.display="none"
+            },200)
+        }
+    },[smallNavVis])
+
+    const showModal=()=> toggleModal(true)
 
     const hamClicked=()=>{
         document.querySelector("nav").style.display="block"
@@ -20,12 +26,7 @@ const Nav=()=> {
         },0)
     }
 
-    const hideNav=()=>{
-        newsmalldis(false)
-        setTimeout(()=>{
-            document.querySelector("nav").style.display="none"
-        },200)
-    }
+    const hideNav=()=> newsmalldis(false)
     
     const buttonValues = ["About", "Front-End", "Back-End", "Education"]
     return(
